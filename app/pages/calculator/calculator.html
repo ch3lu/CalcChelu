@@ -1,0 +1,40 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Calculator</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+
+<div class="calculator">
+    <div class="top">
+    <button  danger class="clear" (click)="clear($event)">C</button>
+    <span class="display">{{firstValue}} {{simbol}} {{tmp}}</span>
+  </div>
+
+  <div class="keys">
+    <!-- operators and other keys -->
+    <button  (click)="numb($event, 7)">7</button>
+    <button  (click)="numb($event, 8)">8</button>
+    <button  (click)="numb($event, 9)">9</button>
+    <button  (click)="oper($event, 'add')" dark class="operator"><ion-icon name="add"></ion-icon></button><br>
+    <button  (click)="numb($event, 4)">4</button>
+    <button  (click)="numb($event, 5)">5</button>
+    <button  (click)="numb($event, 6)">6</button>
+    <button  (click)="oper($event, 'minus')" dark class="operator"><ion-icon name="remove"></ion-icon></button><br>
+    <button  (click)="numb($event, 1)">1</button>
+    <button  (click)="numb($event, 2)">2</button>
+    <button  (click)="numb($event, 3)">3</button>
+    <button  (click)="oper($event, 'div')" dark class="operator div">÷</button><br>
+    <button  (click)="numb($event, 0)">0</button>
+    <button  (click)="numb($event, '.')"> . </button>
+    <button  (click)="equal($event)" secondary class="eval">=</button>
+    <button  (click)="oper($event, 'multiply')" dark class="operator"><ion-icon name="close"></ion-icon></button>
+  </div>
+</div>
+
+<center><p class="credits">by ch3lu  <a href="https://github.com/ch3lu"><ion-icon name="logo-github"></ion-icon></a>  <a href="https://twitter.com/ch3lu"><ion-icon name="logo-twitter"></ion-icon></a>  <a href="mailto:jl@b2code.es"><ion-icon ios="ios-mail" md="md-mail"></ion-icon></a>  with  <a href="http://www.ionicframework.com"><ion-icon name="ionic"></ion-icon></a></p></center>
+
+</ion-content>
